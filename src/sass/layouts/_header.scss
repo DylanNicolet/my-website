@@ -1,9 +1,11 @@
 header{
-    background-color: greenyellow;
+    background-color: $background-primary;
     color: $font-light;
     display: flex;
+    justify-content: space-between;
+    align-items: center;
     width: 100vw;
-    height: 7vh;
+    height: 50px;
 
     img{
         width: 10vw;

@@ -1,23 +1,23 @@
 import React from "react";
 import "../sass/App.css";
+import Header from "../layouts/Header";
+import DarkModeContext from "../context/context";
+import Hero from "./Hero";
 
 function App() {
+  const [darkMode, setDarkMode] = React.useState(false)
+  const value = {darkMode, setDarkMode}
+
+  
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <DarkModeContext.Provider value={value}>
+      <div className="App">
+        <Header />
+        <Hero />
+      </div>
+    </DarkModeContext.Provider>
+   
   );
 }
 

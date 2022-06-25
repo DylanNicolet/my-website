@@ -34,71 +34,179 @@ body p {
   }
 }
 
-.macro {
-  width: 100%;
-  height: 20%;
-  background-color: #FBFBFB;
-  border-radius: 5px;
+@-webkit-keyframes dark-mode-toggle {
+  0% {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+  100% {
+    -webkit-transform: translateX(20px);
+            transform: translateX(20px);
+  }
+}
+
+@keyframes dark-mode-toggle {
+  0% {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+  100% {
+    -webkit-transform: translateX(20px);
+            transform: translateX(20px);
+  }
+}
+
+/*-----------loader----------*/
+@-webkit-keyframes loader-animation {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+@keyframes loader-animation {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes loader-bg {
+  0% {
+    opacity: 1;
+    z-index: 5;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    z-index: 5;
+  }
+}
+
+@keyframes loader-bg {
+  0% {
+    opacity: 1;
+    z-index: 5;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    z-index: 5;
+  }
+}
+
+/*-------favorite btn-----*/
+@-webkit-keyframes favorite-active {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes favorite-active {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes favorite-inactive {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes favorite-inactive {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/*-------meal card-------*/
+@-webkit-keyframes meal-card {
+  0% {
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    opacity: 1;
+  }
+}
+@keyframes meal-card {
+  0% {
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+.mode-toggle {
+  width: 100px;
+  height: 30px;
+  margin-right: 40px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  cursor: pointer;
+  border-radius: 15px;
 }
 
-.macro__icon {
-  width: 50px;
-  height: 50px;
-  border-radius: 5px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin-right: 15px;
+.mode-toggle__switch {
+  width: 25px;
+  height: 25px;
+  margin: 5px;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
-.macro h1 {
-  margin: 0;
-  font-size: 1.1rem;
-}
-
-.macro p {
-  margin: 0;
-}
-
-.red {
-  background-color: rgba(255, 0, 0, 0.07);
-}
-
-.blue {
-  background-color: rgba(74, 183, 255, 0.07);
-}
-
-.yellow {
-  background-color: rgba(249, 206, 35, 0.07);
-}
-
-.pink {
-  background-color: rgba(253, 81, 130, 0.07);
+.mode-toggle--night {
+  -webkit-transform: translate(67px, 0px);
+          transform: translate(67px, 0px);
 }
 
 header {
-  background-color: greenyellow;
+  background-color: #FBFBFB;
   color: white;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 100vw;
-  height: 7vh;
+  height: 50px;
 }
 
 header img {
@@ -165,6 +273,11 @@ header ul {
   display: -ms-flexbox;
   display: flex;
   height: 93vh;
+}
+
+.hero {
+  width: 100%;
+  height: 500px;
 }
 
 .profile-page {
