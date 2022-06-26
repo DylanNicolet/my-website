@@ -1,15 +1,15 @@
 import React, { useContext } from "react";
-import DarkModeContext from "../context/context";
+import LightModeContext from "../context/context";
 import moon from "../images/moon.png";
 import sun from "../images/sun.png";
 import space from "../images/space.jpg";
 
 export default function ModeToggle(){
-    const {darkMode, setDarkMode} = useContext(DarkModeContext)
+    const {lightMode, setLightMode} = useContext(LightModeContext)
 
     const switchStyles = {
         //backgroundColor:darkMode? "grey" : "yellow"
-        backgroundImage: darkMode? "url(" + moon + ")": "url(" + sun + ")",
+        backgroundImage: lightMode? "url(" + sun + ")": "url(" + moon + ")",
         backgroundPosition: 'center',
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
@@ -23,8 +23,8 @@ export default function ModeToggle(){
     }
 
     return(
-        <section className={"mode-toggle"} onClick={() => setDarkMode(prev => !prev)} style={toggleStyles}>
-            <section className={`mode-toggle__switch  ${darkMode && "mode-toggle--night"}`} style={switchStyles}>
+        <section className={"mode-toggle"} onClick={() => setLightMode(prev => !prev)} style={toggleStyles}>
+            <section className={`mode-toggle__switch  ${lightMode && "mode-toggle--night"}`} style={switchStyles}>
             </section>
         </section>
     )

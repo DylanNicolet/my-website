@@ -13,7 +13,7 @@ main {
 }
 
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Roboto Mono', monospace;
 }
 
 body h1 {
@@ -192,8 +192,12 @@ body p {
           transform: translate(46px, 0px);
 }
 
+.language-toggle {
+  width: 50px;
+}
+
 header {
-  color: white;
+  color: #0b92b1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -209,7 +213,7 @@ header {
 }
 
 .footer {
-  background-color: #000000;
+  background-color: #0b92b1;
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -236,7 +240,7 @@ header {
 }
 
 .footer__copyright {
-  color: white;
+  color: #ebebeb;
   -webkit-writing-mode: vertical-rl;
       -ms-writing-mode: tb-rl;
           writing-mode: vertical-rl;
@@ -253,7 +257,7 @@ header {
   height: 100vh;
   -webkit-transition: all 0.5s ease-in;
   transition: all 0.5s ease-in;
-  background-image: url("../images/sand-white.jpg");
+  background-image: url("../images/sand-black.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -262,18 +266,26 @@ header {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  overflow: hidden;
 }
 
-.hero-bg--dark {
-  background-image: url("../images/sand-black.jpg");
+.hero__title {
+  color: #ebebeb;
+  text-align: center;
+  width: 65%;
+  margin: auto auto;
+  font-size: 2rem;
 }
 
 .hero img {
   width: 100%;
-  height: 100vh;
+  height: auto;
   -o-object-fit: cover;
      object-fit: cover;
+  opacity: 0.85;
+}
+
+.hero-bg--light {
+  background-image: url("../images/sand-white.jpg");
 }
 
 .profile-page {

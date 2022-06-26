@@ -2,21 +2,29 @@
     width: 100vw;
     height: 100vh;
     transition: all 0.5s ease-in;
-    background-image: url("../images/sand-white.jpg");
+    background-image: url("../images/sand-black.jpg");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     display: flex;
     flex-wrap: wrap;
-    overflow: hidden;
+
+    &__title{
+        color: $font-light;
+        text-align: center;
+        width: 65%;
+        margin: auto auto;
+        font-size: 2rem;
+    }
+
+    img{
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        opacity: 0.85;
+    }
 }
 
-.hero-bg--dark{
-    background-image: url("../images/sand-black.jpg");
-}
-
-.hero img{
-    width: 100%;
-    height: 100vh;
-    object-fit: cover;
+.hero-bg--light{
+    background-image: url("../images/sand-white.jpg");
 }

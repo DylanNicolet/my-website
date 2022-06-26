@@ -1,20 +1,21 @@
 import React from "react";
 import "../sass/App.css";
-import DarkModeContext from "../context/context";
+import LightModeContext from "../context/context";
 import Hero from "./Hero";
 
 function App() {
-  const [darkMode, setDarkMode] = React.useState(false)
-  const value = {darkMode, setDarkMode}
+  const [lightMode, setLightMode] = React.useState(false)
+  const [french, setFrench] = React.useState(false)
+  const value = {lightMode, setLightMode, french, setFrench}
 
   
 
   return (
-    <DarkModeContext.Provider value={value}>
+    <LightModeContext.Provider value={value}>
       <div className="App">
         <Hero />
       </div>
-    </DarkModeContext.Provider>
+    </LightModeContext.Provider>
    
   );
 }

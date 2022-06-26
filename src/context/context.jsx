@@ -1,8 +1,10 @@
 import React from "react";
 
-const DarkModeContext = React.createContext({
-    darkMode: false,
-    setDarkMode: () => {}
+const LightModeContext = React.createContext({
+    lightMode: false,
+    setDarkMode: () => {},
+    french: false,
+    setFrench: () => {}
 })
 
-export default DarkModeContext
+export default LightModeContext
