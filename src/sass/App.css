@@ -4,7 +4,7 @@
 }
 
 body {
-  margin: 0;
+  margin: auto;
 }
 
 main {
@@ -167,9 +167,8 @@ body p {
 }
 
 .mode-toggle {
-  width: 100px;
+  width: 80px;
   height: 30px;
-  margin-right: 40px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -189,12 +188,11 @@ body p {
 }
 
 .mode-toggle--night {
-  -webkit-transform: translate(67px, 0px);
-          transform: translate(67px, 0px);
+  -webkit-transform: translate(46px, 0px);
+          transform: translate(46px, 0px);
 }
 
 header {
-  background-color: #FBFBFB;
   color: white;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -205,27 +203,9 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 100vw;
+  width: 90%;
   height: 50px;
-}
-
-header img {
-  width: 10vw;
-  margin: 10px 0px 10px 20px;
-}
-
-header nav {
-  width: 90vw;
-  height: auto;
-}
-
-header ul {
-  list-style: none;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  margin: 0 auto;
 }
 
 .footer {
@@ -268,16 +248,32 @@ header ul {
   font-size: 0.5rem;
 }
 
-.main__content {
+.hero {
+  width: 100vw;
+  height: 100vh;
+  -webkit-transition: all 0.5s ease-in;
+  transition: all 0.5s ease-in;
+  background-image: url("../images/sand-white.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 93vh;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  overflow: hidden;
 }
 
-.hero {
+.hero-bg--dark {
+  background-image: url("../images/sand-black.jpg");
+}
+
+.hero img {
   width: 100%;
-  height: 500px;
+  height: 100vh;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .profile-page {

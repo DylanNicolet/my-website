@@ -1,25 +1,9 @@
 header{
-    background-color: $background-primary;
     color: $font-light;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100vw;
+    width: 90%;
     height: 50px;
-
-    img{
-        width: 10vw;
-        margin: 10px 0px 10px 20px;
-    }
-
-    nav{
-        width: 90vw;
-        height: auto;
-    }
-    
-    ul{
-        list-style: none;
-        display: flex;
-        justify-content: space-around;
-    }
+    margin: 0 auto;
 }

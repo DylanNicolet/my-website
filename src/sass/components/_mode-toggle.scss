@@ -1,7 +1,6 @@
 .mode-toggle{
-    width: 100px;
+    width: 80px;
     height: 30px;
-    margin-right: 40px;
     display: flex;
     align-items: center;
     cursor: pointer;
@@ -16,6 +15,7 @@
     margin: 5px;
     transition: all 0.5s ease-in-out;
 }
+
 .mode-toggle--night{
-    transform: translate(67px,0px);
+    transform: translate(46px,0px);
 }
